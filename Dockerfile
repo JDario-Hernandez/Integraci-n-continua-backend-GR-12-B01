@@ -23,7 +23,7 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copiar el archivo JAR desde la etapa de construcción
-COPY --from=build /app/target/mi-proyecto-springboot-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /app/target/tienda-perros-0.0.1-SNAPSHOT.jar app.jar
 
 # Exponer el puerto en el que la aplicación se ejecutará
 EXPOSE 8080
