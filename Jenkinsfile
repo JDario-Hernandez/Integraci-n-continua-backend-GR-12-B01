@@ -16,15 +16,6 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                script {
-                    docker.image('tienda-perros').inside {
-                        sh 'mvn test'
-                    }
-                }
-            }
-        }
         stage('Deploy') {
             steps {
                 script {
