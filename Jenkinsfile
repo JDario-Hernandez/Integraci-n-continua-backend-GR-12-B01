@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 script {
-                    git credentialsId: 'github-credentials-id', url: 'https://github.com/JDario-Hernandez/Integracion-continua-backend-GR-12-B01.git'
+                    git credentialsId: 'github-credentials-id', url: 'https://github.com/JDario-Hernandez/Integraci-n-continua-backend-GR-12-B01.git'
                 }
             }
         }
