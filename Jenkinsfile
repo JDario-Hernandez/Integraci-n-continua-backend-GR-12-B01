@@ -4,8 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/JDario-Hernandez/Integraci-n-continua-backend-GR-12
-B01.git'
+                git 'https://github.com/JDario-Hernandez/Integraci-n-continua-backend-GR-12B01.git'
             }
         }
         stage('Build') {
