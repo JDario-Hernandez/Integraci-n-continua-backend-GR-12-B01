@@ -12,6 +12,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    bat 'docker stop tienda-perros || true'
+                    bat 'docker rm tienda-perros || true'
                     bat 'docker rmi tienda-perros || true'
                     docker.build('tienda-perros', '.')
                 }
@@ -20,8 +22,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    bat 'docker stop tienda-perros || true'
-                    bat 'docker rm tienda-perros || true'
                     bat 'docker run -d --name tienda-perros -p 8081:8081 tienda-perros'
                 }
             }
