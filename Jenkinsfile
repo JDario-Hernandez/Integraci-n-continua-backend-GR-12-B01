@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    bat 'docker run -d --name tienda-perros -p 8082:80 tienda-perros'
+                    bat 'docker run -d --name tienda-perros -p 8082:8081 tienda-perros'
                 }
             }
         }
