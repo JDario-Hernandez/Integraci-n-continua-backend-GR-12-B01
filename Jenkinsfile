@@ -31,7 +31,7 @@ pipeline {
             cleanWs()
         }
         success {
-            echo 'El pipeline se ejecutó correctamente con push.'
+            echo 'El pipeline se ejecutó correctamente.'
         }
         failure {
             echo 'El pipeline falló.'
